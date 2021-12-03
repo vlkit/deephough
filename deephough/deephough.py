@@ -1,5 +1,5 @@
 import torch
-import deep_hough as dh
+from . import hough_ext
 import numpy as np
 import matplotlib.pyplot as plt
 import time
@@ -9,7 +9,7 @@ class deephough(torch.autograd.Function):
     def forward(ctx, feat, numangle, numrho):
         N, C, _, _ = feat.size()
         out = torch.zeros(N, C, numangle, numrho).type_as(feat).cuda()
-        out = dh.forward(feat, out, numangle, numrho)
+        out = hough_ext.forward(feat, out, numangle, numrho)
         outputs = out[0]
         ctx.save_for_backward(feat)
         ctx.numangle = numangle
@@ -22,7 +22,7 @@ class deephough(torch.autograd.Function):
         numangle = ctx.numangle
         numrho = ctx.numrho
         out = torch.zeros_like(feat).type_as(feat).cuda()
-        out = dh.backward(grad_output.contiguous(), out, feat, numangle, numrho)
+        out = hough_ext.backward(grad_output.contiguous(), out, feat, numangle, numrho)
         grad_in = out[0]
         return grad_in, None, None
 
