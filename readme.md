@@ -11,8 +11,8 @@ If you still cannot build the package, please file an issue with detailed enviro
 
 
 ### Example
-```
 See [example.py](./example.py) for details.
+```
 import torch
 from deephough import DeepHough
 dh = DeepHough(num_angle=180, num_bias=100)
