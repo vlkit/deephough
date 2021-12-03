@@ -8,6 +8,9 @@ else it will raise an error.
 
 ### Example
 ```
+See [example.py](./example.py) for details.
+import torch
+from deephough import DeepHough
 dh = DeepHough(num_angle=180, num_bias=100)
 x = torch.zeros(100, 100).cuda()
 x[40, :] = 1
@@ -15,7 +18,7 @@ x[60, :] = 1
 x[:, [40, 50, 60]] = 1
 y = dh(x.view(1, 1, 100, 100))
 ```
-![](./results.png)
+![](results.jpg)
 
 ### Pre-built wheels
 
