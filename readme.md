@@ -5,6 +5,10 @@ Please verify your environment by running `python3 -m torch.utils.collect_env` a
 We suggest `torch>=1.4.0` and `gcc>=7.3.0`. Please note that the gcc should be compatitable with torch
 else it will raise an error.
 
+If you still cannot build the package, please file an issue with detailed environments.
+
+<p style='color: red;'>We ONLY support Linux OS with CUDA installed !</p>
+
 
 ### Example
 ```
