@@ -35,3 +35,7 @@ y = dh(x.view(1, 1, 100, 100))
 | ------------- | -------- | -------- | -------- |
 | 3.8  | 11.0  | 1.9.0 | <http://data.kaizhao.net/projects/deep-hough-transform/wheels/deephough-0.1.0-cu110-cp38-linux_x86_64.whl> |
 | 3.6  | 11.0  | 1.9.0 | <http://data.kaizhao.net/projects/deep-hough-transform/wheels/deephough-0.1.0-cu110-cp36-linux_x86_64.whl> |
+
+
+This project is licensed under the [Creative Commons NonCommercial (CC BY-NC 3.0)](https://creativecommons.org/licenses/by-nc/3.0/) license where only
+non-commercial usage is allowed. For commercial usage, please contact us.
